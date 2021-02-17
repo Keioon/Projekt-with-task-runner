@@ -134,9 +134,59 @@ nav{
 
 /*Services*/
 
-p{
-    text-align: center;
+.services{    
+        .card{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            margin: 0 auto 0 auto;
+            justify-content: center;
+            text-align: center;
+        
+            .card-image{
+                align-content: center;
+                a{
+                    font-size: 0;
+                    text-decoration: none;
+             
+                    i{
+                        font-size: 40px;
+                        color: yellow;
+                        object-fit: cover;
+                        height: 80px;
+                        width: 80px;
+                        border: 5px solid yellow;
+                        border-radius: 100%;
+                        flex-direction: column;
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                }
+            }
+                
+            .card-body{
+                    flex: 1 1 auto;
+                    justify-content: flex-start;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    margin: 5px auto 48px auto;
+                    padding: 0 20px auto 20px;    
+                
+                    p{
+                    color: darkgray;
+                }
+            }
+        }
+        
+        .little-title{
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }  
 }
+
 
 /*Portfolio*/
 
