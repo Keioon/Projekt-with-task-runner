@@ -5,11 +5,13 @@
   margin: 0;
   padding: 0;
   border: 0;
+  transition: all 1s;
 }
 
 .title {
   text-transform: uppercase;
   font-size: 30px;
+  padding: 48px 0;
   text-align: center;
   font-weight: bold;
 }
@@ -20,13 +22,107 @@ section {
 
 /*Nav*/
 nav {
-  display: block;
-  margin-bottom: 48px;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 nav img {
   width: 100%;
   height: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+nav ul {
+  top: 10%;
+  right: 10%;
+  position: absolute;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-align: right;
+  text-transform: uppercase;
+  color: darkcyan;
+}
+
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: crimson;
+}
+
+nav .gold {
+  color: gold;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-family: 'Ballet', cursive;
+}
+
+nav .btn-box {
+  position: absolute;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  top: 70%;
+}
+
+nav .button {
+  color: white;
+  background-color: orange;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  min-width: 200px;
+  text-align: center;
+}
+
+nav .button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+nav .nav-title {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  top: 40%;
+  position: absolute;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  color: white;
+}
+
+nav .nav-title h1 {
+  font-size: 32px;
+  -ms-flex: 100%;
+      flex: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+nav .nav-title h2 {
+  font-style: oblique;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  -ms-flex: 100%;
+      flex: 100%;
 }
 
 /*Services*/
@@ -37,41 +133,43 @@ p {
 /*Portfolio*/
 .portfolio {
   background-color: lightgray;
-}
-
-.portfolio .title {
-  padding: 48px 0;
+  padding-bottom: 48px;
 }
 
 .portfolio .card {
-  margin-bottom: 5px;
-  max-height: 500px;
+  margin-bottom: 10px;
   position: relative;
+  height: 100%;
+  padding: 15px 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  background-clip: border-box;
+  font-size: 0;
 }
 
 .portfolio .card .card-image {
-  display: block;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  height: 100%;
 }
 
 .portfolio .card .card-image img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100% !important;
-  width: 100% !important;
-  vertical-align: middle;
+  height: 100%;
+  width: 100%;
 }
 
 .portfolio .card .card-body {
   text-align: center;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
+  font-size: 12px;
   min-height: 1px;
-  padding: 2px;
+  width: 100%;
+  padding: 20px;
+  margin: auto;
   background-color: #ffffff;
 }
 
@@ -129,5 +227,25 @@ footer ul li:hover {
 footer ul li i {
   font-size: 25px;
   color: #ffffff;
+}
+
+/*Media*/
+@media (max-width: 767px) {
+  nav .nav-title h1 {
+    font-size: 24px;
+  }
+  nav .nav-title h2 {
+    font-size: 20px;
+  }
+  nav .gold {
+    font-size: 10px;
+  }
+  nav ul a {
+    font-size: 10px;
+  }
+  nav .button {
+    font-size: 10px;
+    max-height: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
